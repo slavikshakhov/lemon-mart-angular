@@ -1,16 +1,16 @@
 import { Component } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [],
+  imports: [MatButtonModule, RouterLink],
   template: `
-    <p>
-      home works!
-    </p>
+    <button mat-button routerLink="/manager">Manager</button>
+    <button mat-button routerLink="/inventory">Inventory</button>
+    <button mat-button routerLink="/pos">POS</button>
   `,
-  styles: ``
+  styles: ``,
 })
-export class HomeComponent {
-
-}
+export class HomeComponent {}
